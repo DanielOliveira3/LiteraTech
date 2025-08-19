@@ -2,21 +2,22 @@ import React, { useState } from "react";
 import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function Carrinho() {
-  // Estado inicial do carrinho
+
+  // carrinho
   const [carrinho, setCarrinho] = useState([
     {
-      id: "1",
-      titulo: "O Cortiço",
-      preco: 29.9,
+      id: "30",
+      titulo: "O Paciente",
+      preco: 99.9,
       quantidade: 1,
-      imagem: "https://m.media-amazon.com/images/I/81z7NXdCkKL._AC_UF1000,1000_QL80_.jpg",
+      imagem: "https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/terror/img/O_Paciente.PNG",
     },
     {
-      id: "2",
-      titulo: "Dom Casmurro",
+      id: "18",
+      titulo: "Tom Strong-Um século de aventuras",
       preco: 34.9,
       quantidade: 2,
-      imagem: "https://m.media-amazon.com/images/I/71T0hwF9SgL._AC_UF1000,1000_QL80_.jpg",
+      imagem: "https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/HQ/IMG/Tom%20Strong-Um%20s%C3%A9culo%20de%20aventuras.png",
     },
   ]);
 
@@ -44,7 +45,7 @@ export default function Carrinho() {
 
 
 
-  // Calcular total
+  // Calcular 
   const total = carrinho.reduce((acc, item) => acc + item.preco * item.quantidade, 0);
 
   return (
@@ -82,6 +83,7 @@ export default function Carrinho() {
                       <Text style={styles.botaoQtdTexto}>+</Text>
                     </TouchableOpacity>
                   </View>
+
                 </View>
               </View>
             )}
