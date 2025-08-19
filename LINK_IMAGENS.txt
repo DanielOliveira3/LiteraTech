@@ -1,0 +1,111 @@
+
+
+### Fábulas
+* **A galinha dos ovos de ouro:**
+    https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/F%C3%A1bula/IMG/A_galinha_dos_ovos_de_ouro.jpg
+
+* **A lebre e a tartaruga:**
+    https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/F%C3%A1bula/IMG/A_lebre_e_a_tartaruga.jpg
+
+* **Moral da história:**
+    https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/F%C3%A1bula/IMG/Moral_da_historia.jpg
+
+* **A cigarra e a formiga:**
+    https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/F%C3%A1bula/IMG/a_cigarra_e_a_formiga.jpg
+
+* **Provérbios em fábulas:**
+    https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/F%C3%A1bula/IMG/proverbios_em_fabulas.jpg
+
+---
+
+### HQ (História em Quadrinhos)
+
+* **DEXTER:**
+    https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/HQ/IMG/DEXTER.jpg
+
+* **Drácula:**
+    https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/HQ/IMG/Dr%C3%A1cula.png
+
+* **Memórias Póstumas de Brás Cubas:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/HQ/IMG/Mem%C3%B3rias%20Postumas%20de%20Br%C3%A1s%20Cubas.jpg`
+
+* **O livro de Deus:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/HQ/IMG/O%20livro%20de%20Deus.jpg`
+
+* **Tom Strong-Um século de aventuras:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/HQ/IMG/Tom%20Strong-Um%20s%C3%A9culo%20de%20aventuras.png`
+
+
+---
+
+### Ação
+* **A música do silêncio:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/acao/img/A_m%C3%BAsica_do_sil%C3%AAncio_(A_Cr%C3%B4nica_do_Matador_do_Rei%E2%80%93Livro_3).PNG`
+
+* **Box Harry Potter:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/acao/img/Box_Harry_Potter_vermelho_(edi%C3%A7%C3%A3o_%E2%80%9Cbrit%C3%A2nica%E2%80%9D).PNG`
+
+* **Jogos Vorazes:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/acao/img/Jogos_vorazes.PNG`
+
+* **O nome do vento:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/acao/img/O_nome_do_vento_(A_Cr%C3%B4nica_do_Matador_do_Rei%20%E2%80%93%20Livro_1).PNG`
+
+* **O temor do sábio:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/acao/img/O_temor_do_s%C3%A1bio_(A_Cr%C3%B4nica_do_Matador_do_Rei%E2%80%93Livro_2).PNG`
+
+---
+
+### Comédia
+* **A Mandrágora:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/comedia/img/A_Mandragora.PNG`
+
+* **Auto da Compadecida:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/comedia/img/Auto_da_Compadecida.PNG`
+
+* **Cadê você, Bernadette?:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/comedia/img/Cad%C3%AA_voc%C3%AA_Bernadette..PNG`
+
+* **Super piadas e charadas:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/comedia/img/Super_piadas_e_charadas.PNG`
+
+* **The Comedy Bible:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/comedia/img/The_Comedy_Bible.PNG`
+
+
+---
+
+### Romance
+* **A Culpa É Das Estrelas:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/romance/img/A_Culpa_E_Das_Estrelas.PNG`
+
+* **Agora e para sempre, Lara Jean:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/romance/img/Agora_e_para_sempre_Lara_Jean_Vol_3.PNG`
+
+* **O grande Gatsby:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/romance/img/O_grande_Gatsby.PNG`
+
+* **P.S. Ainda amo você:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/romance/img/P.S_Ainda_amo_voc%C3%AA_Vol_2.PNG`
+
+* **Para todos os garotos que já amei:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/romance/img/Para_todos_os_garotos_que_j%C3%A1_amei_Vol_1.PNG`
+
+
+---
+
+### Terror
+* **O Gato Preto:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/terror/img/O_GATO_PRETO.PNG`
+
+* **O Paciente:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/terror/img/O_Paciente.PNG`
+
+* **O Vilarejo:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/terror/img/O_Vilarejo.PNG`
+
+* **O cemitério:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/terror/img/O_cemit%C3%A9rio.PNG`
+
+* **Terra Amaldiçoada:**
+    `https://raw.githubusercontent.com/VitorSantos007/LiteraTech01/VitorB/livros/terror/img/Terra_Amaldi%C3%A7oada.PNG`
