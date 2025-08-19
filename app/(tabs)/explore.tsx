@@ -1,110 +1,207 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import React, { useState } from "react";
+import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-import { Collapsible } from '@/components/Collapsible';
-import { ExternalLink } from '@/components/ExternalLink';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-import { IconSymbol } from '@/components/ui/IconSymbol';
+export default function Carrinho() {
+  // Estado inicial do carrinho
+  const [carrinho, setCarrinho] = useState([
+    {
+      id: "1",
+      titulo: "O Cortiço",
+      preco: 29.9,
+      quantidade: 1,
+      imagem: "https://m.media-amazon.com/images/I/81z7NXdCkKL._AC_UF1000,1000_QL80_.jpg",
+    },
+    {
+      id: "2",
+      titulo: "Dom Casmurro",
+      preco: 34.9,
+      quantidade: 2,
+      imagem: "https://m.media-amazon.com/images/I/71T0hwF9SgL._AC_UF1000,1000_QL80_.jpg",
+    },
+  ]);
 
-export default function TabTwoScreen() {
+  // Função para aumentar quantidade
+  const aumentarQuantidade = (id: string) => {
+    setCarrinho((prev) =>
+      prev.map((item) =>
+        item.id === id ? { ...item, quantidade: item.quantidade + 1 } : item
+      )
+    );
+  };
+
+  // Função para diminuir quantidade
+  const diminuirQuantidade = (id: string) => {
+    setCarrinho((prev) =>
+      prev
+        .map((item) =>
+          item.id === id && item.quantidade > 1
+            ? { ...item, quantidade: item.quantidade - 1 }
+            : item
+        )
+        .filter((item) => item.quantidade > 0)
+    );
+  };
+
+
+
+  // Calcular total
+  const total = carrinho.reduce((acc, item) => acc + item.preco * item.quantidade, 0);
+
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Explore</ThemedText>
-      </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
-        <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
-        </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
-        <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
-        </ThemedText>
-      </Collapsible>
-      <Collapsible title="Images">
-        <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
-        </ThemedText>
-        <Image source={require('@/assets/images/react-logo.png')} style={{ alignSelf: 'center' }} />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Custom fonts">
-        <ThemedText>
-          Open <ThemedText type="defaultSemiBold">app/_layout.tsx</ThemedText> to see how to load{' '}
-          <ThemedText style={{ fontFamily: 'SpaceMono' }}>
-            custom fonts such as this one.
-          </ThemedText>
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/versions/latest/sdk/font">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Light and dark mode components">
-        <ThemedText>
-          This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user&apos;s current color scheme is, and so you can adjust UI colors accordingly.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Animations">
-        <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
-          the powerful <ThemedText type="defaultSemiBold">react-native-reanimated</ThemedText>{' '}
-          library to create a waving hand animation.
-        </ThemedText>
-        {Platform.select({
-          ios: (
-            <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
-              component provides a parallax effect for the header image.
-            </ThemedText>
-          ),
-        })}
-      </Collapsible>
-    </ParallaxScrollView>
+    <View style={styles.container}>
+      <Text style={styles.titulo}>🛒 Meu Carrinho</Text>
+
+      {carrinho.length === 0 ? (
+        <Text style={styles.emptyCart}>Seu carrinho está vazio 😢</Text>
+      ) : (
+        <>
+          <FlatList
+            data={carrinho}
+            keyExtractor={(item) => item.id}
+            renderItem={({ item }) => (
+              <View style={styles.item}>
+                <Image source={{ uri: item.imagem }} style={styles.imagem} />
+                <View style={styles.info}>
+                  <Text style={styles.nome}>{item.titulo}</Text>
+                  <Text style={styles.preco}>R$ {item.preco.toFixed(2)}</Text>
+
+                  <View style={styles.quantidadeContainer}>
+                    <TouchableOpacity
+                      style={styles.botaoQtd}
+                      onPress={() => diminuirQuantidade(item.id)}
+                    >
+                      <Text style={styles.botaoQtdTexto}>-</Text>
+                    </TouchableOpacity>
+
+                    <Text style={styles.quantidade}>{item.quantidade}</Text>
+
+                    <TouchableOpacity
+                      style={styles.botaoQtd}
+                      onPress={() => aumentarQuantidade(item.id)}
+                    >
+                      <Text style={styles.botaoQtdTexto}>+</Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              </View>
+            )}
+          />
+
+          <View style={styles.totalContainer}>
+            <Text style={styles.totalTexto}>Total: R$ {total.toFixed(2)}</Text>
+            <TouchableOpacity style={styles.finalizar}>
+              <Text style={styles.finalizarTexto}>Finalizar Compra</Text>
+            </TouchableOpacity>
+          </View>
+        </>
+      )}
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
-    position: 'absolute',
+  container: {
+    flex: 1,
+    backgroundColor: "#f4f4f4",
+    padding: 16,
   },
-  titleContainer: {
-    flexDirection: 'row',
-    gap: 8,
+  titulo: {
+    fontSize: 22,
+    fontWeight: "bold",
+    marginBottom: 16,
+    textAlign: "center",
+  },
+  emptyCart: {
+    fontSize: 16,
+    textAlign: "center",
+    marginTop: 30,
+    color: "#555",
+  },
+  item: {
+    flexDirection: "row",
+    backgroundColor: "#fff",
+    borderRadius: 12,
+    padding: 12,
+    marginBottom: 12,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  imagem: {
+    width: 70,
+    height: 100,
+    borderRadius: 6,
+    marginRight: 12,
+  },
+  info: {
+    flex: 1,
+  },
+  nome: {
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  preco: {
+    fontSize: 14,
+    color: "#333",
+    marginBottom: 8,
+  },
+  quantidadeContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 8,
+  },
+  botaoQtd: {
+    backgroundColor: "#007bff",
+    padding: 6,
+    borderRadius: 6,
+  },
+  botaoQtdTexto: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "bold",
+    width: 20,
+    textAlign: "center",
+  },
+  quantidade: {
+    marginHorizontal: 12,
+    fontSize: 16,
+    fontWeight: "600",
+  },
+  remover: {
+    marginTop: 4,
+  },
+  removerTexto: {
+    color: "red",
+    fontSize: 14,
+  },
+  totalContainer: {
+    marginTop: 20,
+    padding: 16,
+    backgroundColor: "#fff",
+    borderRadius: 12,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  totalTexto: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 12,
+  },
+  finalizar: {
+    backgroundColor: "green",
+    paddingVertical: 12,
+    borderRadius: 8,
+    alignItems: "center",
+  },
+  finalizarTexto: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "bold",
   },
 });
